@@ -12,9 +12,6 @@ class ListView1Screen extends StatelessWidget {
             'List View 1',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          backgroundColor: Colors.indigoAccent,
-          shadowColor: Colors.indigoAccent,
-          elevation: 5.0,
         ),
         body: ListView(
           children: [

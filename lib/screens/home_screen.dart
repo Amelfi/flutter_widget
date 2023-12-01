@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/router/app_router.dart';
-// import 'package:flutter_widgets/screens/screens.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,12 +10,7 @@ class HomeScreen extends StatelessWidget {
     final menuOption = AppRouter.menuOptions;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Components',
-            style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: Colors.white)),
-        backgroundColor: Colors.indigoAccent,
+        title: const Text('Flutter Components'),
       ),
       body: ListView.separated(
           itemCount: menuOption.length,

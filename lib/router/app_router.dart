@@ -10,27 +10,22 @@ class AppRouter {
     //Todo: Erase Home
 
     MenuOption(
-        name: 'HomePage',
-        route: 'home',
-        screen: const HomeScreen(),
-        icon: Icons.home),
-    MenuOption(
-        name: 'Lista 1',
+        name: 'List 1',
         route: 'listView1',
         screen: const ListView1Screen(),
         icon: Icons.list),
     MenuOption(
-        name: 'Lista 2',
+        name: 'List 2',
         route: 'listView2',
         screen: const ListView2Screen(),
         icon: Icons.list_alt),
     MenuOption(
-        name: 'Alertas',
+        name: 'Alerts',
         route: 'alert',
         screen: const AlertScreen(),
         icon: Icons.campaign),
     MenuOption(
-        name: 'Tarjetas',
+        name: 'Cards',
         route: 'card',
         screen: const CardScreen(),
         icon: Icons.card_membership_rounded),
@@ -38,11 +33,19 @@ class AppRouter {
         name: 'Avatar',
         route: 'avatar',
         screen: const CircleAvatarScreen(),
-        icon: Icons.supervised_user_circle_rounded)
+        icon: Icons.supervised_user_circle_rounded),
+
+    MenuOption(
+        name: 'Animated Screen',
+        route: 'animated',
+        screen: const AnimatedScreen(),
+        icon: Icons.animation_rounded)
   ];
 
   static Map<String, Widget Function(BuildContext)> getRoutes() {
     Map<String, Widget Function(BuildContext)> routes = {};
+
+    routes.addAll({'home': (BuildContext context) => const HomeScreen()});
 
     for (final option in menuOptions) {
       routes.addAll({option.route: (BuildContext context) => option.screen});

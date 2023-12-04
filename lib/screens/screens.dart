@@ -1,3 +1,4 @@
+export 'package:flutter_widgets/screens/circle_avatar_screen.dart';
 export 'package:flutter_widgets/screens/home_screen.dart';
 export 'package:flutter_widgets/screens/listview1_screen.dart';
 export 'package:flutter_widgets/screens/alert_screen.dart';

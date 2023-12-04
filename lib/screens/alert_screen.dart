@@ -1,23 +1,59 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/Themes/custom_themes.dart';
+
 
 class AlertScreen extends StatelessWidget {
   const AlertScreen({Key? key}) : super(key: key);
 
+  void displyDialog(BuildContext context) {
+    showCupertinoDialog(
+        
+        context: context,
+        builder: (context) {
+          return CupertinoAlertDialog(
+              
+              title: const Text('Mi titulo'),
+              // shape: RoundedRectangleBorder(
+                  // borderRadius: BorderRadius.circular(10)),
+              // elevation: 5,
+              // shadowColor: CustomThemes.primary,
+              content: const Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Mi contenido'),
+                  SizedBox(height: 10),
+                  FlutterLogo(size: 100)
+                ],
+              ),
+              actions: [
+                TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text('Cancelar'))
+              ]);
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(title: const Text('Alerta')),
-      body: const Center(
-        child: Text('AlertScreen'),
-      ),
+      body: Center(
+          child: ElevatedButton(
+              onPressed: () => displyDialog(context),
+              child: const Text(
+                'Mostrar alerta',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ))),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        backgroundColor: CustomThemes.primary,
-        child: const Icon(Icons.add),
-
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: const Icon(
+          Icons.close,
+          color: Colors.white,
+        ),
       ),
     );
   }

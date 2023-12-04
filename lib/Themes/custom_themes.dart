@@ -22,7 +22,21 @@ class CustomThemes {
       //TextButton
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(foregroundColor: primary)
-      )  
+      ),  
+
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        backgroundColor: primary
+      ),
+
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+
+          // textStyle: const TextStyle(color: Colors.white),
+          // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          backgroundColor: primary,
+        ),
+      )
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(

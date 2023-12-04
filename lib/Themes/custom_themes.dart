@@ -36,7 +36,13 @@ class CustomThemes {
           // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           backgroundColor: primary,
         ),
-      )
+      ),
+
+      inputDecorationTheme: const InputDecorationTheme(
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(5),
+                  topRight: Radius.circular(5)))),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(

@@ -50,7 +50,12 @@ class AppRouter {
         name: 'Slider and Checks',
         route: 'slider',
         screen: const SliderScreen(),
-        icon: Icons.check_circle_outline)
+        icon: Icons.check_circle_outline),
+    MenuOption(
+        name: 'Infinite Scroll',
+        route: 'infinite',
+        screen: const InfiniteScrollScreen(),
+        icon: Icons.screenshot)
   ];
 
   static Map<String, Widget Function(BuildContext)> getRoutes() {

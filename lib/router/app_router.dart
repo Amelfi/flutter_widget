@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_widgets/models/models.dart';
+import 'package:flutter_widgets/screens/slider_screen.dart';
 import '../screens/screens.dart';
 
 class AppRouter {
@@ -44,7 +45,12 @@ class AppRouter {
         name: 'Form Screen',
         route: 'form',
         screen: const FormScreen(),
-        icon: Icons.input_rounded)
+        icon: Icons.input_rounded),
+    MenuOption(
+        name: 'Slider and Checks',
+        route: 'slider',
+        screen: const SliderScreen(),
+        icon: Icons.check_circle_outline)
   ];
 
   static Map<String, Widget Function(BuildContext)> getRoutes() {
